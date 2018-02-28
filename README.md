@@ -93,7 +93,7 @@ alloc:start("./examples/1.er").
 ## Algorithm
 
 This module loads the model, builds all possible function scheduling schemes, and
-calculate a lower bound of memory requirement for each graph. This lower bound might
+calculate a lower bound of memory requirement for each scheme. This lower bound might
 be the infimum. Then it select the 5 scheduling schemes that have the least lower
 bounds, and use genetic algorithm on each scheme to search for the optimal allocation,
 i.e. memory requirement equals to the lower bound.
