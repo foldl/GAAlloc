@@ -48,15 +48,19 @@ See `./examples` for examples. Below is the formal definition for a program.
 
 ```Erlang
 -type program() :: {program, prog_inputs(), prog_output(), excludes()}.
--type prog_inputs() :: [{var_name(), size()}].
--type prog_outputs() :: [var_name()].
+-type prog_inputs() :: var_size_list().
+-type prog_outputs() :: var_list().
+-type exclues() :: var_list().
 
 -type function() :: {func, func_name(), fun_inputs(), fun_outputs(), aliases()}.
 -type fun_name() :: string().
--type fun_inputs() :: [var_name()].
--type fun_outputs() :: [{var_name(), size()}].
+-type fun_inputs() :: var_list().
+-type fun_outputs() :: var_size_list().
 -type aliases() :: [alias_list()].
--type alias_list() :: [var_name()].
+-type alias_list() :: var_list().
+
+-type var_list() :: [var_name()].
+-type var_size_list() :: [{var_name(), size()}].
 
 -type var_name() :: string().
 ```
