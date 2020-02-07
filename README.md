@@ -47,6 +47,9 @@ same memory location and have the same life cycle, i.e., they are physically the
 See `./examples` for examples. Below is the formal definition for a program.
 
 ```Erlang
+# program() must be defined after function()s
+-type model() :: function() ... program()
+
 -type program() :: {program, prog_inputs(), prog_output(), excludes()}.
 -type prog_inputs() :: var_size_list().
 -type prog_outputs() :: var_list().
